@@ -1,6 +1,6 @@
 /**
- * @description Solution using two pointers 
- * @param {string[]} string 
+ * @description Solution using two pointers
+ * @param {string[]} string
  * @returns {boolean}
  * @complexities Time => O(n) | Space => O(1)
  */
@@ -20,4 +20,4 @@ const isPalindrome = (string) => {
   return isPalindromeString;
 };
 
-console.log(isPalindrome("abcdvgcba"));
+console.log(isPalindrome("abcdcba"));
