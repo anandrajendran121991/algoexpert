@@ -25,4 +25,23 @@ const majorityNumber = (array) => {
   return maxNumber;
 };
 
-console.log(majorityNumber([1, 2, 3, 2, 2, 1, 2]));
+const majorityNumberBoydMoores = (nums) => {
+  let majorityIdx = 0;
+  let count = 1;
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] === nums[majorityIdx]) {
+      count++;
+    } else {
+      count--;
+    }
+
+    if (count === 0) {
+      count = 1
+      majorityIdx = i;
+    }
+  }
+
+  return nums[majorityIdx];
+};
+
+console.log(majorityNumberBoydMoores([1, 2, 3, 2, 2, 1, 2]));
