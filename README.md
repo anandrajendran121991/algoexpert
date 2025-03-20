@@ -127,3 +127,53 @@ a) For each source, do the following things:
 — iii)Decrement the in-degree of each child by 1.
 — iv)If a child’s in-degree becomes ‘0’, add it to the sources Queue.
 b) Repeat (a), until the source Queue is empty.
+
+Datastructures
+
+Array
+HashMap
+Linked List
+Stacks
+Queues
+Heaps
+Tries
+
+Searching Algorithms
+
+Binary  
+Linear
+
+Sorting
+
+Bubble
+Insertion
+Selection
+Quick
+Heap
+Merge
+
+Common Algorithms
+
+DFS
+BFS
+Backtracking
+Sliding Window
+Two Pointers
+
+Famous Algorithms
+
+Topological Sort
+Dijikstra's
+Prims
+Kruskal
+A Star
+Moore's Voting
+Floy's Cycle Detection
+Union Find
+KMP
+Kadane's
+
+Bit Manipulation
+Math & Geometry
+Dynamic Programming
+Standard Functions
