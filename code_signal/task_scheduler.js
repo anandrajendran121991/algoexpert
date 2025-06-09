@@ -1,4 +1,4 @@
-export class maxHeap {
+class MaxHeap {
   constructor(array) {
     this.heap = this.buildHeap(array);
   }
@@ -67,3 +67,39 @@ export class maxHeap {
     return this.heap.length;
   }
 }
+
+/**
+ * @param {character[]} tasks
+ * @param {number} n
+ * @return {number}
+ */
+var leastInterval = function (tasks, n) {
+  const hashMap = new Map();
+  for (const letter of tasks) {
+    if (hashMap.has(letter)) hashMap.set(letter, hashMap.get(letter) + 1);
+    else hashMap.set(letter, 1);
+  }
+
+  const heap = new MaxHeap([]);
+  for (const [key, value] of hashMap) {
+    heap.insert(value);
+  }
+
+  let time = 0;
+  const queue = [];
+  while (heap.getSize() > 0 || queue.length > 0) {
+    time++;
+    const priorJob = heap.remove();
+    if (priorJob - 1 > 0) {
+      queue.push([priorJob - 1, time + n]);
+    }
+    if (queue.length > 0 && queue[0][1] === time) {
+      const [nextJobInQueue, _] = queue.shift();
+      heap.insert(nextJobInQueue);
+    }
+  }
+
+  return time;
+};
+
+console.log(leastInterval(["A", "A", "A", "B", "B", "B"], 2));

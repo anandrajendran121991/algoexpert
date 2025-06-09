@@ -42,4 +42,5 @@ function buildPattern(substring) {
   return pattern;
 }
 
-console.log(KMP("aefoaefcdaefcdaed", "aefcdaed"));
+//console.log(KMP("aefoaefcdaefcdaed", "aefcdaed"));
+console.log(KMP("aefoaefcdaefcdaed", "ababcb"));
